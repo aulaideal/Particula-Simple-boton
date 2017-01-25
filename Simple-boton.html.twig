@@ -1,0 +1,21 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set attr_extra = '' %}
+{% if particle.extra %}
+    {% for attributes in particle.extra %}
+        {% for key, value in attributes %}
+            {% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% block particle %}
+{% if particle.link %}
+    <a class="simple-boton {% if particle.css.class %} {{ particle.css.class|e }}{% endif %} {% if particle.estiloboton =='button' %}button{% else %} btn {{ particle.estiloboton|raw }}{% endif %} {% if particle.tamanoboton !='normal' %}{{ particle.tamanoboton|e }}{% endif %}" target="{{ particle.target|default('_parent')|e }}" href="{{ particle.link|e }}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+    {% if particle.buttonicon %}{% if particle.ubicacionicono=='ico_ant' %}<i class="{{ particle.buttonicon|e }} ico_ant"></i>{% endif %}{% endif %}
+    {{ particle.buttontext|e }}
+{% if particle.buttonicon %}{% if particle.ubicacionicono=='ico_desp' %}<i class="{{ particle.buttonicon|e }} ico_desp"></i>{% endif %}{% endif %}
+    </a>
+{% endif %}
+
+{% endblock %}

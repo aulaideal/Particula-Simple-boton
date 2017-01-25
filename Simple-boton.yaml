@@ -1,0 +1,93 @@
+name: Simple Botón
+description: Permite insertar un botón dentro de tu diseño.
+type: particle
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Habilitado
+      description: Globally enable Call-to-action particles.
+      default: true
+
+
+
+    buttontext:
+      type: input.text
+      label: Texto del botón
+      description: Escribe el texto del botón.
+      default: Leér más
+
+    link:
+      type: input.text
+      label: Enlace del botón
+      description: Escribe la url de destino.
+      default: http://
+
+    target:
+      type: select.select
+      label: Target
+      description: ¿El enlace se abrirá en la misma ventana o una nueva?.
+      placeholder: 'Seleccionar...'
+      default: _parent
+      options:
+          _parent: Misma ventana
+          _blank: Nueva ventana
+
+    buttonicon:
+      type: input.icon
+      label: Ícono del botón
+      description: Selecciona el ícono para el botón.
+      default: fa fa-arrow-right
+
+    ubicacionicono:
+      type: input.radios
+      label: Ubicación del ícono
+      description: Define la posición del ícono que acompañará al texto del botón.
+      default: ico_ant
+      options:        
+        ico_ant: Antes del texto.
+        ico_desp: Despues del texto.
+
+    
+    estiloboton:
+      type: select.select
+      label: Estilo del Botón
+      description: Elige un estilo predefinido para el botón.
+      default: button  
+      options:
+        button: button
+        btn-default: btn-default
+        btn-primary: btn-primary       
+        btn-success: btn-success
+        btn-info: btn-info
+        btn-warning: btn-warning 
+        btn-danger: tn-danger
+        btn-link: btn-link
+        btn-inverse: btn-inverse
+
+    tamanoboton:
+      type: select.select
+      label: Tamaño del boton
+      description: Defina  el tamaño del boton.
+      placeholder: 'Seleccionar...'
+      default: normal
+      options:
+        normal: Normal
+        btn-mini: btn-mini
+        btn-small: btn-small
+        btn-large: btn-large
+
+    css.class:
+      type: input.selectize
+      label: Clase CSS
+      description: Clase CSS de la partícula.
+      default: 
+
+    extra:
+      type: collection.keyvalue
+      label: Tag Attributes
+      description: Extra Tag attributes.
+      key_placeholder: Key (data-*, style, ...)
+      value_placeholder: Value
+      exclude: ['id', 'class'] 
