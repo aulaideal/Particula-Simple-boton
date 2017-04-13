@@ -2,6 +2,10 @@ name: Simple Botón
 description: Permite insertar un botón dentro de tu diseño.
 type: particle
 
+configuration:
+  caching:
+    type: static
+
 form:
   fields:
     enabled:
@@ -9,8 +13,6 @@ form:
       label: Habilitado
       description: Globally enable Call-to-action particles.
       default: true
-
-
 
     buttontext:
       type: input.text
@@ -54,9 +56,8 @@ form:
       type: select.select
       label: Estilo del Botón
       description: Elige un estilo predefinido para el botón.
-      default: button  
+      default: btn-primary  
       options:
-        button: button
         btn-default: btn-default
         btn-primary: btn-primary       
         btn-success: btn-success
@@ -77,6 +78,12 @@ form:
         btn-mini: btn-mini
         btn-small: btn-small
         btn-large: btn-large
+
+    fullwidth:
+      type: input.checkbox
+      label: Anchura completa
+      description: El botón ocupará el 100% de todo el espacio disponible.
+      default: false
 
     css.class:
       type: input.selectize
