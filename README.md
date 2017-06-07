@@ -1,10 +1,10 @@
 # Partícula "Simple Boton"
 Partícula para Gantry 5 que te permite incluir un botón con multiples opciones de configuración. Puedes cambiar el tamaño, estilo, color,etc. Muy usado en sitios web modernos. 
-<div style="text-align:center" markdown="1">
 
 ![particula-simple-boton2](https://user-images.githubusercontent.com/9434043/26897853-87c65278-4b8f-11e7-96ef-109469d76b17.png)
 ![particula-simple-boton1](https://user-images.githubusercontent.com/9434043/26897854-87cc6d66-4b8f-11e7-9fb5-74e9a268cdef.png)
-</div>
+
+
 Instalación
 -----------
 No hemos incluido un instalador ya que deseamos que esta partícula pueda ser usada tanto en Joomla como en Wordpress. 
