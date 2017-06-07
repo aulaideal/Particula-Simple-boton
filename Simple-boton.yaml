@@ -2,10 +2,6 @@ name: Simple Botón
 description: Permite insertar un botón dentro de tu diseño.
 type: particle
 
-configuration:
-  caching:
-    type: static
-
 form:
   fields:
     enabled:
@@ -56,7 +52,7 @@ form:
       type: select.select
       label: Estilo del Botón
       description: Elige un estilo predefinido para el botón.
-      default: btn-primary  
+      default: btn-primary
       options:
         btn-default: btn-default
         btn-primary: btn-primary       
