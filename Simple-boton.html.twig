@@ -10,7 +10,9 @@
 {% endif %}
 
 {% block particle %}
+{% do gantry.theme.joomla(true) %}
 {% if particle.link %}
+
     <a class="simple-boton btn{% if particle.estiloboton %} {{ particle.estiloboton }}{% endif %}{% if particle.tamanoboton !='normal' %} {{ particle.tamanoboton|e }}{% endif %}{% if particle.fullwidth %} btn-block{% endif %}{% if particle.css.class %} {{ particle.css.class|e }}{% endif %}" target="{{ particle.target|default('_parent')|e }}" href="{{ particle.link|e }}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
     {% if particle.buttonicon %}{% if particle.ubicacionicono=='ico_ant' %}<i class="{{ particle.buttonicon|e }} ico_ant"></i>{% endif %}{% endif %}
     {{ particle.buttontext|e }}
